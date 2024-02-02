@@ -1,0 +1,845 @@
+Started GET "/" for ::1 at 2024-02-01 13:46:19 +0700
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3110)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3204)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms | Allocations: 7864)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"update", :col=>0, :controller=>"game", :row=>0}):
+     6:     <tr>
+     7:       <% row.each_with_index do |cell, j| %>
+     8:         <td>
+     9:           <%= link_to '', {controller: "game", action: "update", row: i, col: j}, method: :post %>
+    10:         </td>
+    11:       <% end %>
+    12:     </tr>
+  
+app/views/game/index.html.erb:9
+app/views/game/index.html.erb:7:in `each'
+app/views/game/index.html.erb:7:in `each_with_index'
+app/views/game/index.html.erb:7
+app/views/game/index.html.erb:5:in `each'
+app/views/game/index.html.erb:5:in `each_with_index'
+app/views/game/index.html.erb:5
+Started GET "/" for ::1 at 2024-02-01 13:47:15 +0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3059)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: d21c082226546f8a1e55
+Version: webpack 4.47.0
+Time: 693ms
+Built at: 02/01/2024 1:47:18 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-cc46df3f6eeec6d1a69f.js   8.62 KiB  application  [emitted] [immutable]  application
+js/application-cc46df3f6eeec6d1a69f.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-cc46df3f6eeec6d1a69f.js js/application-cc46df3f6eeec6d1a69f.js.map
+[./app/javascript/packs/application.js] 4.72 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find package '@babel/plugin-proposal-private-methods' imported from /Users/Fauzi/Documents/tic_tac_toe_app/babel-virtual-resolve-base.js
+    at new NodeError (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:194:5)
+    at packageResolve (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:908:9)
+    at moduleResolve (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:937:20)
+    at defaultResolve (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:1007:15)
+    at resolve (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:1020:12)
+    at tryImportMetaResolve (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/files/plugins.js:142:45)
+    at resolveStandardizedNameForImport (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/files/plugins.js:164:19)
+    at resolveStandardizedName (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/files/plugins.js:173:22)
+    at loadPlugin (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/files/plugins.js:52:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/config-descriptors.js:140:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/gensync/index.js:291:5)
+    at /Users/Fauzi/Documents/tic_tac_toe_app/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/config-descriptors.js:102:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/config-descriptors.js:99:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/gensync-utils/functional.js:39:27
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/config-chain.js:191:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/config-chain.js:77:27)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/partial.js:72:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at loadPartialConfig (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/partial.js:115:25)
+    at loadPartialConfig.next (<anonymous>)
+    at step (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/gensync/index.js:269:25)
+    at evaluateAsync (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/gensync/index.js:291:5)
+    at /Users/Fauzi/Documents/tic_tac_toe_app/node_modules/gensync/index.js:93:9
+    at new Promise (<anonymous>)
+    at async (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/gensync/index.js:92:14)
+    at stopHiding - secret - don't use this - v1 (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/errors/rewrite-stack-trace.js:47:12)
+    at loadPartialConfigAsync (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/@babel/core/lib/config/index.js:34:85)
+    at Object.<anonymous> (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/babel-loader/lib/index.js:126:26)
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/babel-loader/lib/index.js:3:103)
+    at _next (/Users/Fauzi/Documents/tic_tac_toe_app/node_modules/babel-loader/lib/index.js:4:194)
+    at /Users/Fauzi/Documents/tic_tac_toe_app/node_modules/babel-loader/lib/index.js:4:364
+    at new Promise (<anonymous>)
+
+  Rendered layout layouts/application.html.erb (Duration: 3511.2ms | Allocations: 18186)
+Completed 200 OK in 3527ms (Views: 3517.1ms | ActiveRecord: 0.0ms | Allocations: 21858)
+
+
+Started POST "/game/update" for ::1 at 2024-02-01 13:47:25 +0700
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1301)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/game_controller.rb:39:in `set_player_names'
+app/controllers/game_controller.rb:12:in `update'
+Started GET "/" for ::1 at 2024-02-01 22:07:30 +0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 9234)
+Completed 200 OK in 81ms (Views: 60.4ms | ActiveRecord: 0.0ms | Allocations: 13027)
+
+
+Started POST "/game/reset" for ::1 at 2024-02-01 22:07:39 +0700
+Processing by GameController#reset as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Reset Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1704)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 5282)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 5957)
+
+
+Started POST "/game/update" for ::1 at 2024-02-01 22:07:42 +0700
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1134)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/game_controller.rb:39:in `set_player_names'
+app/controllers/game_controller.rb:12:in `update'
+Started POST "/game/reset" for ::1 at 2024-02-01 22:11:10 +0700
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#reset as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Reset Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2976)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 9170)
+Completed 200 OK in 98ms (Views: 61.9ms | ActiveRecord: 0.0ms | Allocations: 13077)
+
+
+Started POST "/game/reset" for ::1 at 2024-02-01 22:11:14 +0700
+Processing by GameController#reset as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Reset Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 6053)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 7537)
+
+
+Started POST "/game/update" for ::1 at 2024-02-01 22:11:16 +0700
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1181)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/game_controller.rb:39:in `set_player_names'
+app/controllers/game_controller.rb:12:in `update'
+Started POST "/game/update" for ::1 at 2024-02-01 22:12:17 +0700
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2501)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2595)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 6429)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    2: <h1>Tic Tac Toe</h1>
+    3: 
+    4: <table>
+    5:   <% @board.each_with_index do |row, i| %>
+    6:     <tr>
+    7:       <% row.each_with_index do |cell, j| %>
+    8:         <td>
+  
+app/views/game/index.html.erb:5
+app/controllers/game_controller.rb:25:in `update'
+Started GET "/" for ::1 at 2024-02-01 22:13:59 +0700
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 9234)
+Completed 200 OK in 44ms (Views: 33.9ms | ActiveRecord: 0.0ms | Allocations: 13028)
+
+
+Started GET "/" for ::1 at 2024-02-01 22:14:01 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5300)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 5877)
+
+
+Started POST "/game/update" for ::1 at 2024-02-01 22:14:04 +0700
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1824)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1903)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2455)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    2: <h1>Tic Tac Toe</h1>
+    3: 
+    4: <table>
+    5:   <% @board.each_with_index do |row, i| %>
+    6:     <tr>
+    7:       <% row.each_with_index do |cell, j| %>
+    8:         <td>
+  
+app/views/game/index.html.erb:5
+app/controllers/game_controller.rb:25:in `update'
+Started GET "/" for ::1 at 2024-02-01 22:16:44 +0700
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 9234)
+Completed 200 OK in 46ms (Views: 36.9ms | ActiveRecord: 0.0ms | Allocations: 13026)
+
+
+Started GET "/" for ::1 at 2024-02-01 22:16:45 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 5300)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 5877)
+
+
+Started GET "/" for ::1 at 2024-02-01 22:16:46 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1653)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 5101)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 5572)
+
+
+Started POST "/game/update" for ::1 at 2024-02-01 22:16:48 +0700
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1824)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1903)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2455)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    2: <h1>Tic Tac Toe</h1>
+    3: 
+    4: <table>
+    5:   <% @board.each_with_index do |row, i| %>
+    6:     <tr>
+    7:       <% row.each_with_index do |cell, j| %>
+    8:         <td>
+  
+app/views/game/index.html.erb:5
+app/controllers/game_controller.rb:26:in `update'
+Started GET "/" for ::1 at 2024-02-01 22:17:08 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1704)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 5287)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 5840)
+
+
+Started POST "/game/reset" for ::1 at 2024-02-01 22:17:10 +0700
+Processing by GameController#reset as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Reset Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1646)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 5086)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 5586)
+
+
+Started POST "/game/update" for ::1 at 2024-02-01 22:17:16 +0700
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"aloalo", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1411)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1479)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1923)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    2: <h1>Tic Tac Toe</h1>
+    3: 
+    4: <table>
+    5:   <% @board.each_with_index do |row, i| %>
+    6:     <tr>
+    7:       <% row.each_with_index do |cell, j| %>
+    8:         <td>
+  
+app/views/game/index.html.erb:5
+app/controllers/game_controller.rb:26:in `update'
+Started POST "/game/update" for ::1 at 2024-02-01 22:18:05 +0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"aloalo", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2501)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2595)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 6429)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    2: <h1>Tic Tac Toe</h1>
+    3: 
+    4: <table>
+    5:   <% @board.each_with_index do |row, i| %>
+    6:     <tr>
+    7:       <% row.each_with_index do |cell, j| %>
+    8:         <td>
+  
+app/views/game/index.html.erb:5
+app/controllers/game_controller.rb:27:in `update'
+Started GET "/" for ::1 at 2024-02-01 22:18:11 +0700
+Processing by GameController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1174)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007fa39f87c068>
+Did you mean?  try):
+  
+app/controllers/game_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2024-02-01 22:18:25 +0700
+Processing by GameController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1083)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007fa39bea5588>
+Did you mean?  try):
+  
+app/controllers/game_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2024-02-01 22:18:52 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 8847)
+Completed 200 OK in 34ms (Views: 32.4ms | Allocations: 10401)
+
+
+Started GET "/" for ::1 at 2024-02-01 22:22:32 +0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3024)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 9237)
+Completed 200 OK in 41ms (Views: 30.3ms | ActiveRecord: 0.0ms | Allocations: 13029)
+
+
+Started POST "/game/update" for ::1 at 2024-02-01 22:22:40 +0700
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1826)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1906)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2555)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    2: <h1>Tic Tac Toe</h1>
+    3: 
+    4: <table>
+    5:     <% @board.each_with_index do |row, i| %>
+    6:         <tr>
+    7:         <% row.each_with_index do |cell, j| %>
+    8:             <td>
+  
+app/views/game/index.html.erb:5
+app/controllers/game_controller.rb:26:in `update'
+Started GET "/" for ::1 at 2024-02-01 22:25:15 +0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2438)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007fbd1477d930>
+Did you mean?  try):
+  
+app/controllers/game_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2024-02-01 22:25:19 +0700
+Processing by GameController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1158)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007fbd1a52fd08>
+Did you mean?  try):
+  
+app/controllers/game_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2024-02-01 22:25:20 +0700
+Processing by GameController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1083)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007fbd16b35328>
+Did you mean?  try):
+  
+app/controllers/game_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2024-02-01 22:26:58 +0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3025)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 9165)
+Completed 200 OK in 121540ms (Views: 39.0ms | ActiveRecord: 0.0ms | Allocations: 353666)
+
+
+Started GET "/" for ::1 at 2024-02-01 22:29:22 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2115)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5783)
+Completed 200 OK in 11ms (Views: 10.4ms | Allocations: 6580)
+
+
+Started GET "/" for ::1 at 2024-02-01 22:29:23 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1651)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5106)
+Completed 200 OK in 13ms (Views: 12.1ms | Allocations: 5621)
+
+
+Started POST "/game/update" for ::1 at 2024-02-01 22:29:25 +0700
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 190.1ms | Allocations: 1657065)
+  Rendered layout layouts/application.html.erb (Duration: 192.7ms | Allocations: 1676994)
+Completed 500 Internal Server Error in 57139ms (Allocations: 1841450)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    2: <h1>Tic Tac Toe</h1>
+    3: 
+    4: <table>
+    5:     <% @board.each_with_index do |row, i| %>
+    6:         <tr>
+    7:         <% row.each_with_index do |cell, j| %>
+    8:             <td>
+  
+app/views/game/index.html.erb:5
+app/controllers/game_controller.rb:28:in `update'
+Started POST "/game/update" for ::1 at 2024-02-01 22:33:10 +0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2445)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2539)
+Completed 500 Internal Server Error in 99278ms (ActiveRecord: 0.0ms | Allocations: 468367)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    2: <h1>Tic Tac Toe</h1>
+    3: 
+    4: <table>
+    5:     <% @board.each_with_index do |row, i| %>
+    6:         <tr>
+    7:         <% row.each_with_index do |cell, j| %>
+    8:             <td>
+  
+app/views/game/index.html.erb:5
+app/controllers/game_controller.rb:28:in `update'
+Started POST "/game/update" for ::1 at 2024-02-01 22:35:03 +0700
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2445)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2539)
+Completed 500 Internal Server Error in 225196ms (ActiveRecord: 0.0ms | Allocations: 696282)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    2: <h1>Tic Tac Toe</h1>
+    3: 
+    4: <table>
+    5:     <% @board.each_with_index do |row, i| %>
+    6:         <tr>
+    7:         <% row.each_with_index do |cell, j| %>
+    8:             <td>
+  
+app/views/game/index.html.erb:5
+app/controllers/game_controller.rb:28:in `update'
+Started GET "/" for ::1 at 2024-02-01 22:38:57 +0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 3030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 9245)
+Completed 200 OK in 39ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 13037)
+
+
+Started GET "/" for ::1 at 2024-02-01 22:38:59 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 5301)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 5878)
+
+
+Started POST "/game/update" for ::1 at 2024-02-01 22:39:05 +0700
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1849)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1927)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2475)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    2: <h1>Tic Tac Toe</h1>
+    3: 
+    4: <table>
+    5:     <% @board.each_with_index do |row, i| %>
+    6:         <tr>
+    7:         <% row.each_with_index do |cell, j| %>
+    8:             <td>
+  
+app/views/game/index.html.erb:5
+app/controllers/game_controller.rb:26:in `update'
+Started GET "/" for ::1 at 2024-02-01 22:43:28 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1706)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 5293)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 5853)
+
+
+Started GET "/" for ::1 at 2024-02-01 22:43:31 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1651)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 5096)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 5562)
+
+
+Started GET "/" for ::1 at 2024-02-02 06:19:59 +0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 9245)
+Completed 200 OK in 49ms (Views: 38.9ms | ActiveRecord: 0.0ms | Allocations: 13037)
+
+
+Started POST "/game/update" for ::1 at 2024-02-02 06:20:02 +0700
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1704)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5283)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 5956)
+
+
+Started POST "/game/update" for ::1 at 2024-02-02 06:20:08 +0700
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"aloalo", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 5092)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 5578)
+
+
+Started POST "/game/update" for ::1 at 2024-02-02 06:21:57 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"aloalo", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2530)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 2624)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 6460)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    2: <h1>Tic Tac Toe</h1>
+    3: 
+    4: <table>
+    5:     <% @board.each_with_index do |row, i| %>
+    6:         <tr>
+    7:         <% row.each_with_index do |cell, j| %>
+    8:             <td>
+  
+app/views/game/index.html.erb:5
+app/controllers/game_controller.rb:25:in `update'
+Started GET "/" for ::1 at 2024-02-02 06:22:09 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2737)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 8913)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.0ms | Allocations: 10448)
+
+
+Started POST "/game/update" for ::1 at 2024-02-02 06:22:12 +0700
+Processing by GameController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "player_name"=>"oji", "commit"=>"Start Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1420)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1488)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1995)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    2: <h1>Tic Tac Toe</h1>
+    3: 
+    4: <table>
+    5:     <% @board.each_with_index do |row, i| %>
+    6:         <tr>
+    7:         <% row.each_with_index do |cell, j| %>
+    8:             <td>
+  
+app/views/game/index.html.erb:5
+app/controllers/game_controller.rb:25:in `update'
+Started GET "/" for ::1 at 2024-02-02 06:22:43 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1653)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5111)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 5588)
+
+
+Started POST "/game/reset" for ::1 at 2024-02-02 06:22:45 +0700
+Processing by GameController#reset as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Reset Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 5092)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 5582)
+
+
+Started POST "/game/reset" for ::1 at 2024-02-02 06:24:31 +0700
+Processing by GameController#reset as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Reset Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2217)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 6057)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 7452)
+
+
+Started POST "/game/reset" for ::1 at 2024-02-02 06:24:34 +0700
+Processing by GameController#reset as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Reset Game"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1637)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5077)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 5624)
+
+
+Started GET "/" for ::1 at 2024-02-02 06:24:40 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1644)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5092)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 5565)
+
+
+Started GET "/" for ::1 at 2024-02-02 06:28:54 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1704)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 5500)
+Completed 200 OK in 14ms (Views: 12.8ms | Allocations: 7003)
+
+
+Started GET "/" for ::1 at 2024-02-02 06:29:12 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1306)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 5140)
+Completed 200 OK in 14ms (Views: 12.9ms | Allocations: 6552)
+
+
+Started GET "/" for ::1 at 2024-02-02 06:30:39 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 490)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4361)
+Completed 200 OK in 14ms (Views: 12.5ms | Allocations: 5774)
+
+
+Started GET "/" for ::1 at 2024-02-02 06:33:04 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 323)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4220)
+Completed 200 OK in 15ms (Views: 14.0ms | Allocations: 5642)
+
+
+Started GET "/" for ::1 at 2024-02-02 06:34:12 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 347)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4234)
+Completed 200 OK in 14ms (Views: 11.5ms | Allocations: 5647)
+
+
+Started GET "/" for ::1 at 2024-02-02 06:38:51 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 343)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4230)
+Completed 200 OK in 19ms (Views: 17.4ms | Allocations: 5642)
+
+
+Started GET "/" for ::1 at 2024-02-02 06:53:41 +0700
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 569)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.6ms | Allocations: 6894)
+Completed 200 OK in 85ms (Views: 73.6ms | ActiveRecord: 0.0ms | Allocations: 10682)
+
+
+Started GET "/" for ::1 at 2024-02-02 07:03:19 +0700
+Processing by GameController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/index.html.erb within layouts/application
+  Rendered game/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 3656)
+Completed 200 OK in 44ms (Views: 38.2ms | Allocations: 4220)
+
+

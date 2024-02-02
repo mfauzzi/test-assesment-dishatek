@@ -1,0 +1,109 @@
+<h1>Tic Tac Toe</h1>
+<div class="players">
+    <input type="text" id="player1" placeholder="Player 1 Name">
+    <input type="text" id="player2" placeholder="Player 2 Name">
+    <button onclick="startGame()">Start Game</button>
+</div>
+<div class="board" id="board">
+    <div class="row">
+        <div class="cell" id="cell-0" onclick="handleMove(0)"></div>
+        <div class="cell" id="cell-1" onclick="handleMove(1)"></div>
+        <div class="cell" id="cell-2" onclick="handleMove(2)"></div>
+    </div>
+    <div class="row">
+        <div class="cell" id="cell-3" onclick="handleMove(3)"></div>
+        <div class="cell" id="cell-4" onclick="handleMove(4)"></div>
+        <div class="cell" id="cell-5" onclick="handleMove(5)"></div>
+    </div>
+    <div class="row">
+        <div class="cell" id="cell-6" onclick="handleMove(6)"></div>
+        <div class="cell" id="cell-7" onclick="handleMove(7)"></div>
+        <div class="cell" id="cell-8" onclick="handleMove(8)"></div>
+    </div>
+</div>
+<button onclick="resetGame()" id="resetGameBtn" style="display: none;">Reset Game</button>
+
+<script>
+    let currentPlayer = 'X';
+    let board = [['', '', ''], ['', '', ''], ['', '', '']];
+    let playerNames = { 'X': '', 'O': '' };
+    let gameOver = false;
+
+    function startGame() {
+        const player1Name = document.getElementById('player1').value;
+        const player2Name = document.getElementById('player2').value;
+        playerNames['X'] = player1Name;
+        playerNames['O'] = player2Name;
+        document.getElementById('resetGameBtn').style.display = 'block';
+        renderBoard();
+    }
+
+    function renderBoard() {
+        const boardElement = document.getElementById('board');
+        boardElement.innerHTML = '';
+        for (let i = 0; i < 3; i++) {
+        const row = document.createElement('div');
+        row.classList.add('row');
+        for (let j = 0; j < 3; j++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            cell.textContent = board[i][j];
+            cell.onclick = function() {
+            if (!gameOver && board[i][j] === '') {
+                makeMove(i, j);
+            }
+            };
+            row.appendChild(cell);
+        }
+        boardElement.appendChild(row);
+        }
+    }
+
+    function makeMove(row, col) {
+        board[row][col] = currentPlayer;
+        renderBoard();
+        if (checkWinner() || boardFull()) {
+        gameOver = true;
+        } else {
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        }
+    }
+
+    function checkWinner() {
+    // Check rows
+    for (let i = 0; i < 3; i++) {
+        if (board[i][0] !== '' && board[i][0] === board[i][1] && board[i][1] === board[i][2]) {
+        return true; // Horizontal win
+        }
+    }
+
+    // Check columns
+    for (let j = 0; j < 3; j++) {
+        if (board[0][j] !== '' && board[0][j] === board[1][j] && board[1][j] === board[2][j]) {
+        return true; // Vertical win
+        }
+    }
+
+    // Check diagonals
+    if (board[0][0] !== '' && board[0][0] === board[1][1] && board[1][1] === board[2][2]) {
+        return true; // Diagonal win (top-left to bottom-right)
+    }
+    if (board[0][2] !== '' && board[0][2] === board[1][1] && board[1][1] === board[2][0]) {
+        return true; // Diagonal win (top-right to bottom-left)
+    }
+
+    return false; // No winner
+    }
+
+
+    function boardFull() {
+        return board.every(row => row.every(cell => cell !== ''));
+    }
+
+    function resetGame() {
+        board = [['', '', ''], ['', '', ''], ['', '', '']];
+        currentPlayer = 'X';
+        gameOver = false;
+        renderBoard();
+    }
+</script>
